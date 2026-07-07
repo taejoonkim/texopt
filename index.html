@@ -1,12 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My GitHub Page</title>
-</head>
-<body>
-  <h1>Hello, GitHub Pages!</h1>
-  <p>This is my first GitHub Page.</p>
-</body>
+<html>
+  <head>
+    <title>Robust In-Engine Texture Optimization from Inconsistent Generative Targets</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/quasar@2.18.5/dist/quasar.prod.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <div id="q-app">
+        <div style="max-width: 1280px; margin: 0 auto; padding: 0 20px;">
+            <h2 style="text-align: center; margin-top: 40px;">
+            Robust In-Engine Texture Optimization from Inconsistent Generative Targets
+            </h2>
+            
+            <div class="row justify-center q-mt-md">
+                <div class="col-2 text-h5">Taejoon Kim</div>
+                <div class="col-2 text-h5">Seung-Uk Yoon</div>
+                <div class="col-2 text-h5">Seong-Jae Lim</div>
+                <div class="col-2 text-h5">Bon-Woo Hwang</div>
+                <div class="col-2 text-h5">Kinam Kim</div>
+                <div class="col-2 text-h5">Seung Wook Lee</div>
+            </div>
+            
+            <div class="row">
+                <div class="col text-h6" style="text-align: center;">Electronics and Telecommunications Research Institute (ETRI)</div>
+            </div>
+            
+            <div class="row justify-center q-mt-lg">
+                <q-btn flat no-caps color="primary" label="SIGGRAPH 2026 (Conference Paper)" size="lg" class="col-auto" target="_blank" href="https://s2026.conference-schedule.org/"></q-btn>
+            </div>
+
+            <div class="row justify-center q-gutter-md q-mt-md">
+              <q-btn color="primary" icon="description" label="Paper (PDF)" class="col-auto" href="https://drive.google.com/file/d/1kQB9n9kjgILKpZ3Ww79h5WugMedt8sV1/view?usp=sharing" target="_blank"></q-btn>
+              <q-btn color="primary" icon="play_circle" label="Video" class="col-auto" href="https://drive.google.com/file/d/1QogBy2EGU3zVKdwSWglGKJ3ESMnS8pUp/view" target="_blank"></q-btn>
+            </div>
+
+            <!-- Hero Image/Video -->
+            <q-card flat bordered class="q-mt-lg">
+              <img src="image/teaser.jpg">
+              <q-card-section class="text-body1">
+                 Our method optimizes textures from inconsistent AI-generated target images, producing sharp results despite geometric misalignment and semantic hallucinations. Unlike existing methods that produce blurry or ghosting artifacts, our approach recovers high-fidelity details (e.g., the sharp creases of double eyelids) through joint uncertainty estimation and geometric alignment.
+              </q-card-section>
+            </q-card>
+
+            <!-- Abstract -->
+            <q-card flat bordered class="q-mt-lg">
+              <q-card-section>
+                <div class="text-h5">Abstract</div>                
+              </q-card-section>
+              <q-separator></q-separator>
+              <q-card-section>
+                <p class="text-body1">
+                  We propose a robust texture optimization framework that handles inconsistent AI-generated targets by operating directly within non-differentiable production pipelines. Standard optimization approaches struggle with inconsistent targets, often producing blurry textures and ghosting artifacts. Moreover, existing inverse rendering methods rely on differentiable renderers, causing a rendering gap when assets are deployed in production engines. To address the inconsistencies, we introduce a robust formulation that jointly optimizes a deformation grid and an uncertainty map. This formulation effectively decouples geometric misalignment from semantic hallucinations. To avoid the rendering gap, we leverage finite-difference gradient estimation to operate entirely within standard rasterizers. Extensive experiments demonstrate that our approach recovers sharp, high-fidelity textures from inconsistent AI-generated targets, achieving higher visual quality than existing methods. This makes our technique a practical tool for film production, gaming, and virtual reality, where flexibility and visual quality are paramount.
+                </p>
+              </q-card-section>
+            </q-card>
+
+            <!-- Video -->
+            <q-card flat bordered class="q-mt-lg">
+              <q-card-section>
+                <div class="text-h5">Video</div>                
+              </q-card-section>
+              <q-separator></q-separator>
+              <q-card-section>
+                <div class="row justify-center">
+                  <iframe width="960" height="540" src="https://drive.google.com/file/d/1QogBy2EGU3zVKdwSWglGKJ3ESMnS8pUp/preview" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+                </div>
+              </q-card-section>
+            </q-card>
+
+            <!-- Method Overview -->
+            <q-card flat bordered class="q-mt-lg">
+              <q-card-section>
+                <div class="text-h5">Method</div>                
+              </q-card-section>
+              <q-separator></q-separator>
+              <q-card-section>
+                <img src="image/overview.png" style="width: 100%;">
+                <p class="text-body1 q-mt-md">
+                  Overview of our method. Our optimization estimates an uncertainty map $U$ to down-weight unreliable pixels and a deformation grid $G$ to correct geometric misalignments. The weighted gradients update textures $T$ via finite-difference estimation. The entire pipeline runs within the game engine's shader programs.
+                </p>
+              </q-card-section>
+            </q-card>
+
+            <!-- Citation -->
+            <q-card flat bordered class="q-mt-lg q-mb-xl">
+              <q-card-section>
+                <div class="text-h5">Citation</div>                
+              </q-card-section>
+              <q-separator></q-separator>
+              <q-card-section>
+                <pre style="background: #f5f5f5; padding: 15px; border-radius: 4px; overflow-x: auto;">
+@inproceedings{kimTexOpt,
+  title={Robust In-Engine Texture Optimization from Inconsistent Generative Targets},
+  author={Kim, Taejoon and Yoon, Seung-Uk and Lim, Seong-Jae and Hwang, Bon-Woo and Kim, Kinam and Lee, Seung Wook},
+  year = {2026},
+  isbn = {9798400725548},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3799902.3811170},
+  doi = {10.1145/3799902.3811170},
+  numpages = {12},
+  series = {SIGGRAPH Conference Papers '26}
+}
+                </pre>
+              </q-card-section>
+            </q-card>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quasar@2.18.5/dist/quasar.umd.prod.js"></script>
+    
+    <script>
+      const app = Vue.createApp({
+        setup () {
+          return {}
+        }
+      })
+      app.use(Quasar)
+      app.mount('#q-app')
+    </script>
+  </body>
 </html>
