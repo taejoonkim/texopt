@@ -2,6 +2,13 @@
 <html>
   <head>
     <title>Robust In-Engine Texture Optimization from Inconsistent Generative Targets</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Project page for Robust In-Engine Texture Optimization from Inconsistent Generative Targets, SIGGRAPH 2026.">
+    <meta property="og:title" content="Robust In-Engine Texture Optimization from Inconsistent Generative Targets">
+    <meta property="og:description" content="Robust in-engine texture optimization from inconsistent AI-generated targets using uncertainty estimation and deformation-grid alignment.">
+    <meta property="og:image" content="image/teaser.jpg">
+    <meta property="og:type" content="website">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/quasar@2.18.5/dist/quasar.prod.css" rel="stylesheet" type="text/css">
   </head>
@@ -78,7 +85,7 @@
               <q-card-section>
                 <img src="image/overview.png" style="width: 100%;">
                 <p class="text-body1 q-mt-md">
-                  Overview of our method. Our optimization estimates an uncertainty map $U$ to down-weight unreliable pixels and a deformation grid $G$ to correct geometric misalignments. The weighted gradients update textures $T$ via finite-difference estimation. The entire pipeline runs within the game engine's shader programs.
+                  Overview of our method. Our optimization estimates an uncertainty map <strong><em>U</em></strong> to down-weight unreliable pixels and a deformation grid <strong><em>G</em></strong> to correct geometric misalignments. The weighted gradients update textures <strong><em>T</em></strong> via finite-difference estimation. The entire pipeline runs within the game engine's shader programs.
                 </p>
               </q-card-section>
             </q-card>
